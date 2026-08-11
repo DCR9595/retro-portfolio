@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dhruv.exe | Player Profile</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <div class="scanlines"></div>
+
+    <div class="game-screen">
+
+        <!-- HEADER -->
+
+        <header class="header">
+
+            <div class="small-text">
+                SYSTEM ONLINE
+            </div>
+
+            <h1>DHRUV.EXE</h1>
+
+            <p class="blink">
+                PRESS START TO ENTER
+            </p>
+
+        </header>
+
+
+        <!-- PLAYER SECTION -->
+
+        <main>
+
+            <section class="player-section">
+
+
+                <!-- CHARACTER -->
+
+                <div class="character-box">
+
+                    <div class="box-title">
+                        PLAYER CHARACTER
+                    </div>
+
+                    <div class="character-image">
+
+                        <img
+                            src="Assets/CHARACTERBG.png"
+                            alt="Retro character"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- PLAYER INFORMATION -->
+
+                <div class="player-info">
+
+                    <h2>DHRUV</h2>
+
+                    <p class="player-class">
+                        CLASS: DEVELOPER
+                    </p>
+
+
+                    <div class="stat">
+
+                        <div class="stat-label">
+                            LEVEL
+                        </div>
+
+                        <div class="stat-value">
+                            19
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <div class="stat-label">
+                            LOCATION
+                        </div>
+
+                        <div class="stat-value">
+                            INDIA
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <div class="stat-label">
+                            STATUS
+                        </div>
+
+                        <div class="stat-value online">
+                            ONLINE
+                        </div>
+
+                    </div>
+
+
+                    <!-- HP -->
+
+                    <div class="bar-container">
+
+                        <div class="bar-title">
+                            HP
+                        </div>
+
+                        <div class="bar">
+
+                            <div class="bar-fill hp"></div>
+
+                        </div>
+
+                        <span>100 / 100</span>
+
+                    </div>
+
+
+                    <!-- XP -->
+
+                    <div class="bar-container">
+
+                        <div class="bar-title">
+                            XP
+                        </div>
+
+                        <div class="bar">
+
+                            <div class="bar-fill xp"></div>
+
+                        </div>
+
+                        <span>65 / 100</span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- MENU -->
+
+            <nav class="menu">
+
+                <button onclick="showSection('about')">
+                    ABOUT
+                </button>
+
+                <button onclick="showSection('skills')">
+                    SKILLS
+                </button>
+
+                <button onclick="showSection('projects')">
+                    PROJECTS
+                </button>
+
+                <button onclick="showSection('contact')">
+                    CONTACT
+                </button>
+
+            </nav>
+
+
+            <!-- CONTENT -->
+
+            <section id="content" class="content">
+
+                <h2>WELCOME, PLAYER!</h2>
+
+                <p>
+                    Welcome to my personal retro profile.
+                </p>
+
+                <p>
+                    Select an option above to explore my character,
+                    skills and projects.
+                </p>
+
+                <p class="hint">
+                    ▶ SELECT AN OPTION TO CONTINUE
+                </p>
+
+            </section>
+
+
+            <!-- INVENTORY -->
+
+            <section class="inventory">
+
+                <h2>INVENTORY</h2>
+
+                <div class="inventory-items">
+
+                    <div class="item">
+                        💻
+                        <span>LAPTOP</span>
+                    </div>
+
+                    <div class="item">
+                        🎮
+                        <span>CONTROLLER</span>
+                    </div>
+
+                    <div class="item">
+                        ⚡
+                        <span>ESP32</span>
+                    </div>
+
+                    <div class="item">
+                        ☕
+                        <span>COFFEE</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <p>
+                DHRUV.EXE © 2026
+            </p>
+
+            <p>
+                ALL SYSTEMS OPERATIONAL
+            </p>
+
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
