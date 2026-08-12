@@ -258,3 +258,47 @@ function showSection(section) {
     }, 180);
 
 }
+/* =====================================
+   SPIDER-MAN FORWARD + REVERSE ANIMATION
+===================================== */
+
+const spiderman = document.getElementById("spidermanAnimation");
+
+let reverseAnimation = false;
+let reverseFrame;
+
+
+/* When the video finishes playing forward */
+
+spiderman.addEventListener("ended", function () {
+
+    reverseAnimation = true;
+
+    reverseFrame = requestAnimationFrame(playReverse);
+
+});
+
+
+/* Play the video backwards */
+
+function playReverse() {
+
+    if (!reverseAnimation) {
+        return;
+    }
+
+    spiderman.currentTime -= 0.02;
+
+    if (spiderman.currentTime <= 0) {
+
+        spiderman.currentTime = 0;
+
+        reverseAnimation = false;
+
+        cancelAnimationFrame(reverseFrame);
+
+        return;
+    }
+
+    reverseFrame = requestAnimationFrame(playReverse);
+}

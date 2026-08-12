@@ -769,3 +769,28 @@ footer {
     transform: translateY(2px);
     box-shadow: none;
 }
+/* =====================================
+   SPIDER-MAN WEBM ANIMATION
+===================================== */
+
+.spiderman-container {
+    position: absolute;
+
+    top: 0;
+    left: 15px;
+
+    width: 110px;
+
+    z-index: 100;
+
+    pointer-events: none;
+}
+
+.spiderman-container video {
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+}
