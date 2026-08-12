@@ -5,192 +5,256 @@
 function showSection(section) {
 
     let content = document.getElementById("content");
+    let screen = document.querySelector(".game-screen");
 
 
-    /* ABOUT */
+    /* =====================================
+       REMOVE PREVIOUS EFFECTS
+    ===================================== */
 
-    if (section === "about") {
+    screen.classList.remove(
+        "screen-shake",
+        "crt-flash",
+        "glitch"
+    );
 
-        content.innerHTML = `
-
-            <h2>ABOUT ME</h2>
-
-            <p>
-                ▶ PLAYER INFORMATION
-            </p>
-
-            <p>
-                Hey! I'm Dhruv.
-            </p>
-
-            <p>
-                I'm an engineering student At the Dayananda Sagar College of Engineering, Bangalore. Im currently pursuing my Bachelors in Electrical and Electronics Engineering. I have quite a few interests in coding and electronics. In my free time, I like to play games, watch movies and anime, and listen to music. I play guitar and sing as well. I wish to be my fit day by day and make the most of my life. I want to be a better version of myself every day.
-
-            </p>
-
-            <p>
-                I'm currently learning how to build
-                websites and applications.
-            </p>
-
-            <p>
-                My current mission:
-                BUILD COOL THINGS.
-            </p>
-
-        `;
-
-    }
+    content.classList.remove(
+        "menu-exit",
+        "menu-enter"
+    );
 
 
-    /* SKILLS */
+    /* =====================================
+       RESTART ANIMATIONS
+    ===================================== */
 
-    else if (section === "skills") {
+    void screen.offsetWidth;
+    void content.offsetWidth;
 
-        content.innerHTML = `
 
-            <h2>SKILLS</h2>
+    /* =====================================
+       START SCREEN EFFECTS
+    ===================================== */
 
-            <p>
-                JAVA
-            </p>
+    screen.classList.add("screen-shake");
+    screen.classList.add("crt-flash");
+    screen.classList.add("glitch");
 
-            <div class="bar">
-                <div class="bar-fill xp"
-                     style="width: 70%;">
-                </div>
+
+    /* =====================================
+       OLD CONTENT EXITS
+    ===================================== */
+
+    content.classList.add("menu-exit");
+
+
+    /* =====================================
+       LOAD NEW CONTENT
+    ===================================== */
+
+    setTimeout(function() {
+
+
+        /* =====================================
+           ABOUT
+        ===================================== */
+
+        if (section === "about") {
+
+            content.innerHTML = `
+
+                <h2>ABOUT ME</h2>
+
+                <p>
+                    ▶ PLAYER INFORMATION
+                </p>
+
+                <p>
+                    Hey! I'm Dhruv.
+                </p>
+
+                <p>
+                    I'm an engineering student at the
+                    Dayananda Sagar College of Engineering.
+                </p>
+
+                <p>
+                    I'm currently learning how to build
+                    websites and applications.
+                </p>
+
+                <p>
+                    My current mission:
+                    <br>
+                    BUILD COOL THINGS.
+                </p>
+
+            `;
+
+        }
+
+
+        /* =====================================
+           SKILLS
+        ===================================== */
+
+       else if (section === "skills") {
+
+    content.innerHTML = `
+
+        <h2>SKILLS</h2>
+
+        <p>JAVA</p>
+
+        <div class="bar">
+            <div
+                class="bar-fill xp"
+                style="--xp: 70%;">
             </div>
+        </div>
 
 
-            <p>
-                C++
-            </p>
+        <p>C++</p>
 
-            <div class="bar">
-                <div class="bar-fill xp"
-                     style="width: 80%;">
-                </div>
+        <div class="bar">
+            <div
+                class="bar-fill xp"
+                style="--xp: 80%;">
             </div>
+        </div>
 
 
-            <p>
-                C
-            </p>
+        <p>C</p>
 
-            <div class="bar">
-                <div class="bar-fill xp"
-                     style="width: 80%;">
-                </div>
+        <div class="bar">
+            <div
+                class="bar-fill xp"
+                style="--xp: 80%;">
             </div>
+        </div>
 
 
-            <p>
-                HTML
-            </p>
+        <p>HTML</p>
 
-            <div class="bar">
-                <div class="bar-fill xp"
-                     style="width: 70%;">
-                </div>
+        <div class="bar">
+            <div
+                class="bar-fill xp"
+                style="--xp: 70%;">
             </div>
+        </div>
 
 
-            <p>
-                CSS
-            </p>
+        <p>CSS</p>
 
-            <div class="bar">
-                <div class="bar-fill xp"
-                     style="width: 20%;">
-                </div>
+        <div class="bar">
+            <div
+                class="bar-fill xp"
+                style="--xp: 20%;">
             </div>
+        </div>
 
 
-            <p>
-                JAVASCRIPT
-            </p>
+        <p>JAVASCRIPT</p>
 
-            <div class="bar">
-                <div class="bar-fill xp"
-                     style="width: 30%;">
-                </div>
+        <div class="bar">
+            <div
+                class="bar-fill xp"
+                style="--xp: 30%;">
             </div>
+        </div>
 
-        `;
+    `;
 
-    }
+}
 
+        /* =====================================
+           PROJECTS
+        ===================================== */
 
-    /* PROJECTS */
+        else if (section === "projects") {
 
-    else if (section === "projects") {
+            content.innerHTML = `
 
-        content.innerHTML = `
+                <h2>PROJECTS</h2>
 
-            <h2>PROJECTS</h2>
+                <p>
+                    ▶ BLIND ASSISTING GLOVE
+                </p>
 
-            <p>
-                ▶ BLIND ASSISTING GLOVE
-            </p>
-
-            <p>
-                An ESP32-based project using sensors
-                and vibration feedback.
-            </p>
-
-
-            <p>
-                ▶ SOLAR POWER BANK
-            </p>
-
-            <p>
-                A portable power project involving
-                solar energy and battery management.
-            </p>
+                <p>
+                    An ESP32-based project using sensors
+                    and vibration feedback.
+                </p>
 
 
-            <p>
-                ▶ RETRO PORTFOLIO
-            </p>
+                <p>
+                    ▶ SOLAR POWER BANK
+                </p>
 
-            <p>
-                This website.
-            </p>
-
-        `;
-
-    }
+                <p>
+                    A portable power project involving
+                    solar energy and battery management.
+                </p>
 
 
-    /* CONTACT */
+                <p>
+                    ▶ RETRO PORTFOLIO
+                </p>
 
-    else if (section === "contact") {
+                <p>
+                    This website.
+                </p>
 
-        content.innerHTML = `
+            `;
 
-            <h2>CONTACT</h2>
+        }
 
-            <p>
-                ▶ COMMUNICATION TERMINAL
-            </p>
 
-            <p>
-                EMAIL:
-                dhrucr@gmail.com
-            </p>
+        /* =====================================
+           CONTACT
+        ===================================== */
 
-            <p>
-                GITHUB:
-                github.com/DCR9595
-            </p>
+        else if (section === "contact") {
 
-            <p>
-                INSTAGRAM:
-                @dhruvvv.cr_
-            </p>
+            content.innerHTML = `
 
-        `;
+                <h2>CONTACT</h2>
 
-    }
+                <p>
+                    ▶ COMMUNICATION TERMINAL
+                </p>
+
+                <p>
+                    EMAIL:
+                    dhrucr@gmail.com
+                </p>
+
+                <p>
+                    GITHUB:
+                    github.com/DCR9595
+                </p>
+
+                <p>
+                    INSTAGRAM:
+                    @dhruvvv.cr_
+                </p>
+
+            `;
+
+        }
+
+
+        /* =====================================
+           NEW CONTENT ENTERS
+        ===================================== */
+
+        content.classList.remove("menu-exit");
+
+        void content.offsetWidth;
+
+        content.classList.add("menu-enter");
+
+
+    }, 180);
 
 }

@@ -556,3 +556,216 @@ footer {
     }
 
 }
+/* =====================================
+   RETRO MENU EFFECTS
+===================================== */
+
+.game-screen.screen-shake {
+    animation: screenShake 0.25s ease;
+}
+
+@keyframes screenShake {
+
+    0% {
+        transform: translate(0, 0);
+    }
+
+    20% {
+        transform: translate(-4px, 2px);
+    }
+
+    40% {
+        transform: translate(4px, -2px);
+    }
+
+    60% {
+        transform: translate(-3px, 1px);
+    }
+
+    80% {
+        transform: translate(3px, -1px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+
+}
+
+
+/* =====================================
+   CONTENT EXIT EFFECT
+===================================== */
+
+.content.menu-exit {
+    animation: menuExit 0.18s ease forwards;
+}
+
+@keyframes menuExit {
+
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-12px);
+    }
+
+}
+
+
+/* =====================================
+   CONTENT ENTER EFFECT
+===================================== */
+
+.content.menu-enter {
+    animation: menuEnter 0.35s ease forwards;
+}
+
+@keyframes menuEnter {
+
+    0% {
+        opacity: 0;
+        transform: translateX(12px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+/* =====================================
+   CRT FLASH EFFECT
+===================================== */
+
+.game-screen.crt-flash::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: #00ff66;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    animation: crtFlash 0.25s ease;
+
+}
+
+@keyframes crtFlash {
+
+    0% {
+        opacity: 0.18;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
+
+/* =====================================
+   TITLE GLITCH EFFECT
+===================================== */
+
+.game-screen.glitch .header h1 {
+
+    animation: glitch 0.3s steps(2);
+
+}
+
+@keyframes glitch {
+
+    0% {
+        transform: translate(0);
+        text-shadow: none;
+    }
+
+    20% {
+        transform: translate(-3px, 2px);
+        text-shadow: 3px 0 red;
+    }
+
+    40% {
+        transform: translate(3px, -2px);
+        text-shadow: -3px 0 blue;
+    }
+
+    60% {
+        transform: translate(-2px, 0);
+        text-shadow: 2px 0 red;
+    }
+
+    100% {
+        transform: translate(0);
+        text-shadow: none;
+    }
+
+}
+/* =====================================
+   RPG XP BAR ANIMATION
+===================================== */
+
+/* =====================================
+   RPG XP BAR ANIMATION
+===================================== */
+
+.bar-fill.xp {
+    width: 0;
+    animation: xpFill 0.8s ease-out forwards;
+    animation-delay: 0.25s;
+}
+
+@keyframes xpFill {
+
+    from {
+        width: 0;
+    }
+
+    to {
+        width: var(--xp);
+    }
+
+}
+
+@keyframes xpFill {
+
+    from {
+        width: 0;
+    }
+
+    to {
+        width: var(--xp);
+    }
+
+}
+/* =====================================
+   MENU BUTTON EFFECT
+===================================== */
+
+.menu-button {
+    transition:
+        transform 0.1s,
+        box-shadow 0.1s,
+        background-color 0.1s;
+}
+
+.menu-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 8px currentColor;
+}
+
+.menu-button:active {
+    transform: translateY(2px);
+    box-shadow: none;
+}
