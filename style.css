@@ -33,6 +33,7 @@ body {
 ===================================== */
 
 .game-screen {
+    position:relative;
 
     width: 900px;
 
